@@ -8,35 +8,41 @@ class Program
             Console.WriteLine("Welcome to the program!");
         }
 
-        static string PromptUserName(string userName)
+        static string PromptUserName()
         {
             Console.WriteLine("Please enter your name");
-            userName = Console.ReadLine();
+            string userName = Console.ReadLine();
             return userName;
         }
 
-        static int PromptUserNumber(string userNumberString)
+        static int PromptUserNumber()
         {
             Console.WriteLine("Enter your favorite number");
-            userNumberString = Console.ReadLine();
-            int userNumber = int.Parse(userNumberString);
+            int userNumber = int.Parse(Console.ReadLine());
             return userNumber;
         }
 
-        static int SquareNumber(string squareNumberString)
+        static int SquareNumber(int userNumber)
         {
-            Console.WriteLine("Please enter a number to square");
-            squareNumberString = Console.ReadLine();
-            int squareNumber = int.Parse(squareNumberString);
+            int squareNumber = userNumber * userNumber;
             return squareNumber;
         }
+
+    static void DisplayResult(int squareNumber, string userName)
+    {
+        Console.WriteLine($"{userName}, the square of your number is {squareNumber}");
+    }
 
     static void Main(string[] args)
     {
         DisplayWelcome();
 
-        PromptUserName("");
+        string userName = PromptUserName();
 
-        PromptUserNumber("");
+        int userNumber = PromptUserNumber();
+
+        int squaredNumber = SquareNumber(userNumber);
+
+        DisplayResult(squaredNumber, userName);
     }
 }
