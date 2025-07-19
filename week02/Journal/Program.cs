@@ -59,6 +59,7 @@ class Program
                 Console.Write("Enter the filename");
                 string filename = Console.ReadLine();
                 theJournal.SaveToFile(filename);
+                break;
             }
 
             else if (choice == "4")
