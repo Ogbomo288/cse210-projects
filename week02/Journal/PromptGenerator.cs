@@ -8,7 +8,10 @@ public class PromptGenerator
                 "What was the strongest emotion I felt today?",
                 "If I had one thing I could do over today, what would it be?",
                 "What new skill did I practice or learn today?",
-                "Describe a small act of kindness you witnessed or performed today."
+                "Describe a small act of kindness you witnessed or performed today.",
+                "What is the worst thing you did today?",
+                "What wasted your time the most today?",
+                "What is the kindest thing you did today?"
             };
 
 
